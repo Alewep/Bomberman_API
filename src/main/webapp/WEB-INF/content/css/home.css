@@ -1,0 +1,58 @@
+
+h1 {
+	font-size: 500%;
+	color:#F1C40F ;
+}
+
+h3 {
+	
+}
+
+body {
+    background: #222D32;
+    font-family: 'Roboto', sans-serif;
+    width:50%;
+    margin-left:auto;
+    margin-right:auto;
+    background-image: url("https://fr.wikipedia.org/wiki/Fichier:Bomb_icon.svg");
+}
+
+.log {
+	color:#FFFFFF;
+    margin-top: 75px;
+    height: auto;
+    width:100%;
+    background: #1A2226;
+    text-align: center;
+   
+}
+.log > h2 {
+	font-size: 300%;
+}
+
+
+input{
+    background-color: #1A2226;
+    border: none;
+    border-bottom: 2px solid #0DB8DE;
+    border-top: 0px;
+    border-radius: 0px;
+    font-weight: bold;
+    outline: 0;
+    margin-bottom: 20px;
+    padding-left: 0px;
+    color: #ECF0F5;
+}
+
+
+
+.buttonsend {
+	background-color: #008CBA;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+}
