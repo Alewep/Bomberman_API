@@ -3,11 +3,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/content/css/navbar.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/content/css/home_player.css" />
 <meta charset="UTF-8">
 <title>Bomberman player - Home</title>
 </head>
 <body>
-	 <%@include  file="content/html/navbar.html" %>
+	 <%@include  file="../content/html/navbar.html" %>
 	<h1 id="Welcome">Welcome <c:out value="${ sessionScope.player.getLogin() }"></c:out> ! </h1>
 	<section id="statistics" class="statistics">
 		<h2> Statistics </h2>

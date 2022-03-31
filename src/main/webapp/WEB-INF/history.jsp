@@ -3,12 +3,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/content/css/navbar.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/content/css/history.css" />
 <meta charset="UTF-8">
 <title>Bomberman - History</title>
 </head>
 <body>
- <%@include  file="content/html/navbar.html" %>
-<h1>History of <c:out value="${sessionScope.player.getLogin()}">Unknown</c:out> Games </h1>
+ <%@include  file="/content/html/navbar.html" %>
+<h1>History of <c:out value="${sessionScope.player.getLogin()}">Unknown</c:out> games </h1>
 
 <ul>
 	 <c:forEach items="${games}" var="game">
@@ -25,8 +27,6 @@
     </c:forEach>
     
 </ul>
-
-${error}
 
 </body>
 </html>

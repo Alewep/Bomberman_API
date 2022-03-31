@@ -3,8 +3,8 @@
 <html>
 <head>
 
-<style><%@include file="content/css/home.css"%></style>
-<script><%@include file="content/js/home.js"%></script>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/content/css/home.css" />
+<script type="text/javascript" src="${pageContext.request.contextPath}/content/js/home.js"></script>
 <meta charset="UTF-8">
 <title>Bomberman - Home</title>
 </head>
@@ -47,7 +47,7 @@
 	
 	
 	<section class="error">
-		<p><c:out value="${ eroor }"></c:out></p>
+		<p><c:out value="${ error }"></c:out></p>
 	</section> 
 
 

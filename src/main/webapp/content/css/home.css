@@ -1,33 +1,41 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 h1 {
+	
 	font-size: 500%;
 	color:#F1C40F ;
+	text-shadow: 0px 0px 10px #000000
 }
 
-h3 {
-	
+h2 {
+	font-size: 300%;
+	color:#ffffff ;
+}
+
+.error{
+	color:red;
 }
 
 body {
     background: #222D32;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Press Start 2P', cursive;
     width:50%;
     margin-left:auto;
     margin-right:auto;
-    background-image: url("https://fr.wikipedia.org/wiki/Fichier:Bomb_icon.svg");
+    background-image: url("../image/bomb.png");
+    background-size: 20%;
 }
 
 .log {
 	color:#FFFFFF;
     margin-top: 75px;
-    height: auto;
-    width:100%;
+    height:auto;
+    width:auto;
     background: #1A2226;
     text-align: center;
    
 }
 .log > h2 {
-	font-size: 300%;
+	font-size: 200%;
 }
 
 
@@ -39,6 +47,7 @@ input{
     border-radius: 0px;
     font-weight: bold;
     outline: 0;
+    font-size: 100%;
     margin-bottom: 20px;
     padding-left: 0px;
     color: #ECF0F5;

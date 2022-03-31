@@ -15,7 +15,7 @@ import dao.PlayerDao;
 
 
 
-@WebServlet("/home")
+@WebServlet("")
 public class Home extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
@@ -78,6 +78,7 @@ public class Home extends HttpServlet {
 			
 			session.invalidate();
 			request.setAttribute("error", e.getMessage());
+
 		}
 		
 		doGet(request,response);
