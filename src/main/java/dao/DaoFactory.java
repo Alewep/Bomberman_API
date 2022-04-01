@@ -2,6 +2,10 @@ package dao;
 
 import java.sql.*;
 
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+
 public class DaoFactory {
 	 private String url;
 	 private String username;
@@ -19,12 +23,20 @@ public class DaoFactory {
         } catch (ClassNotFoundException e) {
 
         }
-
-        DaoFactory instance = new DaoFactory("jdbc:sqlite:/home/etud/Bomberman/Bomberman_web/bdd/database.db",null,null);
+        String connectionURL;
+		try {
+			InitialContext initialContext = new InitialContext();
+			Context environmentContext = (Context) initialContext.lookup("java:/comp/env");
+	        connectionURL = (String) environmentContext.lookup("databasePath");
+	       
+		} catch (NamingException e) {
+			connectionURL = "";
+		}
+		DaoFactory instance = new DaoFactory("jdbc:sqlite:"+connectionURL,null,null);
         return instance;
     }
 
-    public Connection getConnection() throws SQLException {
+    public Connection getConnection() throws SQLException  {
     	 Connection connexion = DriverManager.getConnection(url, username, password);
          connexion.setAutoCommit(false);
          return connexion;
@@ -34,3 +46,4 @@ public class DaoFactory {
         return new PlayerDaoImpl(this);
     }
 }
+

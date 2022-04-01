@@ -22,6 +22,7 @@ public class PlayerDaoImpl implements PlayerDao {
 		PreparedStatement preparedStatement = null;
 	
 		try  {
+			
 		    connexion = daoFactory.getConnection();
 		    preparedStatement = connexion.prepareStatement("INSERT INTO player VALUES (?, ?);");
 		    preparedStatement.setString(1, player.getLogin());
@@ -29,7 +30,9 @@ public class PlayerDaoImpl implements PlayerDao {
 		
 		    preparedStatement.executeUpdate();
 		    connexion.commit();
+		    
 		    return;
+		    
 		} catch (SQLException e) {
 		    try {
 		        if (connexion != null) {
@@ -40,7 +43,7 @@ public class PlayerDaoImpl implements PlayerDao {
 		    }
 		    if (e.getErrorCode() == 19 ) // primary_key error
 		    	throw new DaoException("A player with the same login already exists");
-		    else throw new DaoException("Database connection problem");
+		    else throw new DaoException("Database connection problem:");
 		    
 		}
 		finally {
@@ -107,7 +110,7 @@ public class PlayerDaoImpl implements PlayerDao {
 		    return result;
 		} 
 		catch (SQLException e) {
-				throw new DaoException("Database connection problem :"+e.toString());
+				throw new DaoException("Database connection problem :");
 		}
 		
 		
@@ -161,7 +164,7 @@ public class PlayerDaoImpl implements PlayerDao {
 		    } catch (SQLException e2) {
 		    	
 		    }
-		    throw new DaoException("Database connection problem "+e.toString());
+		    throw new DaoException("Database connection problem ");
 		}
 		finally {
 		    try {
@@ -170,7 +173,7 @@ public class PlayerDaoImpl implements PlayerDao {
 		        }
 		    } 
 		    catch (SQLException e) {
-		        throw new DaoException("Database connection problem "+e.toString());
+		        throw new DaoException("Database connection problem ");
 		    }
 		}
 		
