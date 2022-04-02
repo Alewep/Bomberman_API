@@ -1,2 +1,2 @@
 # Bomberman_web
-lien du déploiement : http://90.49.172.221/Bomberman_web_1.8/
+lien du déploiement : http://www.bomberman.alwep.fr/Bomberman_web_1.8/
